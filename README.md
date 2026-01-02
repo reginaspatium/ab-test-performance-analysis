@@ -14,4 +14,4 @@ This project analyzes the results of an A/B test by evaluating key metrics such 
 ## 📊 Tableau Dashboard
 [👉 View Interactive Dashboard in Tableau Public](https://public.tableau.com/app/profile/regina.dotsenko/viz/ABtests_17666617507500/ABTestingTool?publish=yes)
 
-![Dashboard Preview](visualizations/ab_test_preview.png)
+![Dashboard Preview](visualization/ab_test_preview.png)
