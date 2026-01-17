@@ -1,18 +1,24 @@
-# A/B Test Results & Product Performance Analysis
+# A/B Test Results & Product Performance Analysis (SQL + Python + Tableau)
 
 ## 📝 Project Overview
-This project presents a comprehensive analysis of product performance through a series of **4 distinct A/B tests**. Each test targets a different stage of the user funnel, from account creation to the final payment step. 
+This project presents a comprehensive analysis of product performance through a series of 4 distinct A/B tests. The core focus is on Test #1 (UI Optimization), analyzing its impact on the user funnel from account creation to the final payment step.
 
-*This documentation specifically details the results of **Test #1 (UI Optimization)**, with data processing and insights derived from a larger experimental dataset.*
+Initially designed as a SQL + Tableau project, it has been fully refactored to include a Python-based statistical engine, ensuring robust validation of results using automated Z-tests across multiple segments.
 
 ## 🛠 Technical Stack
-* **SQL (BigQuery)**: Advanced CTEs, Multiple Joins, Data Aggregation, and `UNION ALL` for data normalization.
-* **Visualization**: Tableau.
+* **SQL (BigQuery)**: Advanced CTEs, Multiple Joins, and UNION ALL for complex data normalization and retrieval.
+* **Python (Pandas, Statsmodels)**: Automated data processing and implementation of Two-Sample Z-Tests for proportions.
+* **Visualization**: Tableau (Interactive Dashboards).
 
-* ## 📊 Analysis & Results
+## 🧬 Analysis Methodology (Python Integration)
+To make the analysis more rigorous, a Python script was integrated to:Automate Aggregation: Group data by Test Number, Metric, Continent, and Device.Statistical Validation: Calculate Z-scores and P-values using statsmodels.stats.proportion.Significance Labeling: Automatically classify results as Significant Growth, Significant Drop, or Statistical Noise based on a 95% confidence level (|Z| > 1.96).
 
-* **Primary Metric:** The `begin_checkout / session` rate showed a statistically significant increase of **6.66%** (rising from 8.34% to 8.90%, p = 0.00289).
-* **Secondary Metric:** The conversion to sessions with orders remained stable with a non-significant uplift of **0.64%** (p = 0.26), confirming the change is safe for final sales.
+* ## 📊 Key Results (Test #1)
+Based on the Python-processed dataset, Test #1 showed strong positive momentum:
+* **Payment Info Conversion (add_payment_info)**: Achieved a highly significant growth of +12.54% (Z = 3.9249, p < 0.001).
+* **Checkout Process (begin_checkout)**: Statistically significant increase of +6.66% (Z = 2.9788, p = 0.0029).
+* **Shipping Info (add_shipping_info)**: Significant growth of +6.56% (Z = 2.6036).
+* **New Accounts**: Showed a slight decrease of -3.35%, but with Z = -1.5429, this result is not statistically significant and is treated as statistical noise.
 
 ### 🔍 Segment Insights
 * **Desktop:** Highly positive and statistically significant results (p < 0.001).
@@ -26,6 +32,6 @@ This project presents a comprehensive analysis of product performance through a 
 **Roll out Variant B (Larger Button) for all users.** The test successfully met the primary goal. Although specific segments like Tablet and Organic Search performed better with the original version, the significant uplift on Desktop (the primary traffic driver) and the overall positive trend justify a full rollout.
 
 ## 📊 Tableau Dashboard
-[👉 View Interactive Dashboard in Tableau Public](https://public.tableau.com/app/profile/regina.dotsenko/viz/ABtests_17666617507500/ABTestingTool?publish=yes)
+[👉 View Interactive Dashboard in Tableau Public](https://public.tableau.com/views/A_Btests/ABTestingTool?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ![Dashboard Preview](visualization/ab_test.png)
