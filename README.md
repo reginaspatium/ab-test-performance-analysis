@@ -34,4 +34,4 @@ Based on the Python-processed dataset, Test #1 showed strong positive momentum:
 ## 📊 Tableau Dashboard
 [👉 View Interactive Dashboard in Tableau Public](https://public.tableau.com/views/A_Btests/ABTestingTool?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-![Dashboard Preview](viz/A_B Testing Tool.png)
+![Dashboard Preview](viz/A_B%20Testing%20Tool.png)
