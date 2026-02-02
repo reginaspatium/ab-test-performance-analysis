@@ -11,7 +11,10 @@ Initially designed as a SQL + Tableau project, it has been fully refactored to i
 * **Visualization**: Tableau (Interactive Dashboards).
 
 ## 🧬 Analysis Methodology (Python Integration)
-To make the analysis more rigorous, a Python script was integrated to:Automate Aggregation: Group data by Test Number, Metric, Continent, and Device.Statistical Validation: Calculate Z-scores and P-values using statsmodels.stats.proportion.Significance Labeling: Automatically classify results as Significant Growth, Significant Drop, or Statistical Noise based on a 95% confidence level (|Z| > 1.96).
+To make the analysis more rigorous, a Python script was integrated to:
+**Automate Aggregation:** Group data by Test Number, Metric, Continent, and Device.
+**Statistical Validation:** Calculate Z-scores and P-values using statsmodels.stats.proportion.
+**Significance Labeling:** Automatically classify results as Significant Growth, Significant Drop, or Statistical Noise based on a 95% confidence level (Z > 1.96).
 
 * ## 📊 Key Results (Test #1)
 Based on the Python-processed dataset, Test #1 showed strong positive momentum:
